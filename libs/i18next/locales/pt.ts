@@ -1,0 +1,5 @@
+
+export const pt = {
+  translation: {
+  }
+};

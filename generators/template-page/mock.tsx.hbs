@@ -1,0 +1,10 @@
+
+export const mock{{pascalCase name}}TestId = jest.fn(() => "{{pascalCase name}} TestId");
+
+const {{pascalCase name}} = jest.fn(() => {
+  return (
+    <div data-testid={mock{{pascalCase name}}TestId()}></div>
+  );
+});
+
+export default {{pascalCase name}};

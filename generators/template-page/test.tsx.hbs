@@ -1,0 +1,14 @@
+import "jest-styled-components";
+import { screen } from "@testing-library/react";
+import { renderWithTheme } from "utils/jest";
+
+
+import {{pascalCase name}} from ".";
+
+describe("<{{pascalCase name}} />", () => {
+  it("", () => {
+    const { container } = renderWithTheme(<{{pascalCase name}} />);
+
+    expect(container.firstChild).toMatchSnapshot();
+  });
+});
