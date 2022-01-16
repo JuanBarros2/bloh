@@ -11,18 +11,18 @@ module.exports = (plop) => {
     actions: [
       {
         type: "add",
-        path: "../src/application/use{{pascalCase name}}/use{{pascalCase name}}.ts",
-        templateFile: "template-application/hook.tsx.hbs"
+        path: "../app/use{{pascalCase name}}/use{{pascalCase name}}.ts",
+        templateFile: "template-app/hook.tsx.hbs"
       },
       {
         type: "add",
-        path: "../src/application/use{{pascalCase name}}/use{{pascalCase name}}.d.ts",
-        templateFile: "template-application/types.d.ts.hbs"
+        path: "../app/use{{pascalCase name}}/use{{pascalCase name}}.d.ts",
+        templateFile: "template-app/types.d.ts.hbs"
       },
       {
         type: "add",
-        path: "../src/application/use{{pascalCase name}}/use{{pascalCase name}}.test.ts",
-        templateFile: "template-application/test.tsx.hbs"
+        path: "../app/use{{pascalCase name}}/use{{pascalCase name}}.test.ts",
+        templateFile: "template-app/test.tsx.hbs"
       }
     ]
   });

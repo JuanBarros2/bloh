@@ -1,22 +1,25 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from "next";
+import Head from "next/head";
+import { ThemeProvider } from "styled-components";
+import light from "styles/themes/light";
+import GlobalStyle from "styles/global";
+import Header from "components/Header/Header";
+import useToogle from "app/useToogle/useToogle";
 
 const Home: NextPage = () => {
+  const { state, changeState } = useToogle();
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-      </Head>
+    <>
+      <GlobalStyle />
+      <ThemeProvider theme={state ? light : dark}>
+        <header>
+          <Header />
+          <button onClick={changeState}></button>
+        </header>
+        <footer></footer>
+      </ThemeProvider>
+    </>
+  );
+};
 
-      <main className={styles.main}>
-      </main>
-
-      <footer className={styles.footer}>
-        
-      </footer>
-    </div>
-  )
-}
-
-export default Home
+export default Home;
